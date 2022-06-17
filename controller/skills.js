@@ -75,7 +75,6 @@ function edit(req, res) {
 
 function update(req, res) {
     req.body.start = !!req.body.start
-    console.log(req.body.start)
     Skill.findByIdAndUpdate(req.params.id, req.body, {new: true})
     .then(skill => {
       res.redirect(`/skills/${skill._id}`)

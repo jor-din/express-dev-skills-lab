@@ -12,7 +12,7 @@
         <input value="<%= skill.name %>" type="text" name="name">
         <input value="<%= skill.position %>" type="text" name="position">
         <input value="<%= skill.jersey %>" type="text" name="jersey">
-        <input type="checkbox" <%= skill.start ? 'checked' : '' %> name="start">Starting?
+        <input type="checkbox" <% skill.start ? 'checked' : '' %> name="start">Starting?
         <button type="submit">Update</button>
     </form>
     <a href="/skills/<%= skill._id %> ">Cancel</a>
